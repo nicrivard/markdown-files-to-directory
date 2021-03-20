@@ -1,6 +1,6 @@
 # Description
 
-A collection of Python scripts to manipulate markdown files in a chose directory (e.g. Dropbox folder)
+A collection of Python scripts to manipulate markdown files in a chosen directory (e.g. Dropbox folder)
 
 # Scripts
 
@@ -8,6 +8,10 @@ A collection of Python scripts to manipulate markdown files in a chose directory
 
     - Loop through an array of [file_name, string] and append to files in path/to/directory
 
-2. [create-daily-notes-in-directory](https://github.com/nicrivard/markdown-files-to-directory/blob/master/create-daily-notes-in-directory.py)
+2. [create-daily-notes-in-personal-directory](https://github.com/nicrivard/markdown-files-to-directory/blob/master/create-daily-notes-in-personal-directory.py)
 
-    - Create new daily note files in a directory according to a specified template e.g. January 1st
+    - Create new daily note files in a personal directory according to a specified template e.g. January 1st
+
+3. [create-daily-notes-in-work-directory](https://github.com/nicrivard/markdown-files-to-directory/blob/master/create-daily-notes-in-work-directory.py)
+
+    - Create new daily note files in a work directory according to a specified template e.g. 210101 Monday, 2021 W01
