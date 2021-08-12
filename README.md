@@ -14,4 +14,8 @@ A collection of Python scripts to manipulate markdown files in a chosen director
 
 3. [create-daily-notes-in-work-directory](https://github.com/nicrivard/markdown-files-to-directory/blob/master/create-daily-notes-in-work-directory.py)
 
-    - Create new daily note files in a work directory according to a specified template e.g. 210101 Monday, 2021 W01
+    - Create new daily note files in a work directory according to a specified template e.g. 210101 Monday
+
+4. [create-weekly-notes-in-work-directory](https://github.com/nicrivard/markdown-files-to-directory/blob/master/create-weekly-notes-in-work-directory.py)
+
+    - Create new weekly note files in a work directory according to a specified template e.g. 2021 W01
