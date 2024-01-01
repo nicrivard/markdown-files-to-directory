@@ -1,6 +1,6 @@
 import os, datetime, pandas as pd
 
-path = 'C:\\Users\\2020745.UK\\OneDrive - EY\Work Vault'
+path = '/Users/nrivard/Work Vault' # 'C:\\Users\\2020745.UK\\OneDrive - EY\Work Vault'
 os.chdir(path)
 
 listOfDates = pd.date_range(start="2021-01-01",end="2021-12-31").tolist()
