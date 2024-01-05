@@ -21,7 +21,7 @@ for date in listOfDates:
     if(int(day) < 10):
         day = str(day).replace("0", "")
     dailyStoic = date.strftime("%B ") + str(day) + str(suffix)
-    dailyNoteText = "---\ncalories_in: \ncalories_out: \nBMR: 1800\n---\n\n##### What are you grateful for today? \n\n- \n\n##### What did you learn today? \n\n- \n\n##### What will you improve tomorrow? \
+    dailyNoteText = "---\ncalories_in: \ncalories_out: \nBMR: 1800\nintermittent fasting: false\nhuel: false\nstrength training: false\n5+ pages: false\n---\n\n##### What are you grateful for today? \n\n- \n\n##### What did you learn today? \n\n- \n\n##### What will you improve tomorrow? \
 \n\n- \n\n---\n![[" + dailyStoic + "]]\n\n---\nTags: #journal "
     title = date.strftime("%y%m%d %A")
     with open(str(title) + ".md", 'w') as newFile:
