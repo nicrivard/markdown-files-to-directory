@@ -3,7 +3,7 @@ import os, datetime, pandas as pd
 path = '/Users/nrivard/Work Vault' # 'C:\\Users\\2020745.UK\\OneDrive - EY\Work Vault'
 os.chdir(path)
 
-listOfDates = pd.date_range(start="2021-01-01",end="2021-12-31").tolist()
+listOfDates = pd.date_range(start="2025-01-01",end="2025-12-31").tolist()
 
 for date in listOfDates:
     delta1 = datetime.timedelta(1)
