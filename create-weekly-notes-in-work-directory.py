@@ -3,7 +3,7 @@ import os, datetime, pandas as pd
 path = '/Users/nrivard/Work Vault' # 'C:\\Users\\2020745.UK\\OneDrive - EY\Work Vault'
 os.chdir(path)
 
-listOfDates = pd.date_range(start="2025-01-01",end="2025-12-31").tolist()
+listOfDates = pd.date_range(start="2026-01-01",end="2026-12-31").tolist()
 
 for date in listOfDates:
     delta1 = datetime.timedelta(1)
@@ -126,7 +126,7 @@ for date in listOfDates:
         last_week = (date - delta1).strftime("%Y W%W")
         this_week = date.strftime("%Y W%W")
         next_week = (date + delta7).strftime("%Y W%W")
-        weeklyNoteText = '---\naliases: [' + monday + ' - ' + sunday + ']\n---\n\n[[' + last_week + '|<< Last week]] | [[' + next_week + '|Next week >>]]\n\n# Priori-threes\n1. \n2. \n3. \n\n# Actions\n\n##### This Week\n\n```query\nline: ("[ ]" -"line:") ("' + this_week + '" OR (file: ("' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '")))\n```\n\n##### Other\n\n```query\n/(20[2-9][0-9] W[0-5][0-9])/ -"' + this_week + '" line: ("[ ]" -"line:")\n```\n\n# Planner\n\n##### This Week\n\n[[' + mo + ']]\n[[' + tu + ']]\n[[' + we + ']]\n[[' + th + ']]\n[[' + fr + ']]\n\n##### Other\n\n```query\n\n(line: ("' + this_week + '" -"line:") OR (file: "' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '")) file: -("' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '" OR /(20[2-9][0-9] W[0-5][0-9])/)\n```\n\n# Completed\n\n### This Week\n\n```query\n"' + this_week + '" line: ("[x]" -"line:")\n```\n\n---\nTags: #EY/CLIENT/AICPA\n'
+        weeklyNoteText = '---\naliases: [' + monday + ' - ' + sunday + ']\n---\n\n[[' + last_week + '|<< Last week]] | [[' + next_week + '|Next week >>]]\n\n# Priori-threes\n1. \n2. \n3. \n\n# Actions\n\n##### This Week\n\n```query\nline: ("[ ]" -"line:") ("' + this_week + '" OR (file: ("' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '")))\n```\n\n##### Other\n\n```query\n/(20[2-9][0-9] W[0-5][0-9])/ -"' + this_week + '" line: ("[ ]" -"line:")\n```\n\n# Planner\n\n##### This Week\n\n[[' + mo + ']]\n[[' + tu + ']]\n[[' + we + ']]\n[[' + th + ']]\n[[' + fr + ']]\n\n##### Other\n\n```query\n\n(line: ("' + this_week + '" -"line:") OR (file: "' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '")) file: -("' + monday + '" OR "' + tuesday + '" OR "' + wednesday + '" OR "' + thursday + '" OR "' + friday + '" OR /(20[2-9][0-9] W[0-5][0-9])/)\n```\n\n# Completed\n\n### This Week\n\n```query\n"' + this_week + '" line: ("[x]" -"line:")\n```\n\n---\nTags: \n'
         title = date.strftime("%Y W%W")
         with open(str(title) + ".md", 'w') as newFile:
             print(weeklyNoteText, file=newFile)
